@@ -3,7 +3,7 @@ Author: Ian McEwen. https://github.com/ianmcorvidae
 """
 
 import re
-
+import socket
 from logster.logster_helper import MetricObject, LogsterParser
 from logster.logster_helper import LogsterParsingException
 
@@ -11,7 +11,7 @@ from logster.logster_helper import LogsterParsingException
 class Status:
     """A predicate on status codes paired with a unique name."""
     def __init__(self, prop, pred):
-        self.prop = prop
+        self.prop = '%s-%s' % (prop, socket.gethostname())
         self.pred = pred
 
     def matches(self, code, size):

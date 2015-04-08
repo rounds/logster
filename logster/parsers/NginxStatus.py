@@ -1,3 +1,7 @@
+"""Nginx parser for Logster
+Author: Ian McEwen. https://github.com/ianmcorvidae
+"""
+
 import re
 
 from logster.logster_helper import MetricObject, LogsterParser

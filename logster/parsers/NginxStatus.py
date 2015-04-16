@@ -19,11 +19,11 @@ class Status:
 
 # Status codes are matched here from top to bottom - so do most specific first
 status = [
-    Status('http_500_nginx', lambda c, s: c == 500 and s <= 1024),
-    Status('http_500_trace', lambda c, s: c == 500 and s > 1024),
-    Status('http_502', lambda c, s: c == 502),
-    Status('http_503', lambda c, s: c == 503),
-    Status('http_504', lambda c, s: c == 504),
+#    Status('http_500_nginx', lambda c, s: c == 500 and s <= 1024),
+#    Status('http_500_trace', lambda c, s: c == 500 and s > 1024),
+#    Status('http_502', lambda c, s: c == 502),
+#    Status('http_503', lambda c, s: c == 503),
+#    Status('http_504', lambda c, s: c == 504),
 
     Status('http_1xx', lambda c, s: c >= 100 and c < 200),
     Status('http_2xx', lambda c, s: c >= 200 and c < 300),
